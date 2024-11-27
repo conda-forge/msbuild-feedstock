@@ -1,5 +1,5 @@
 {% set name = "msbuild" %}
-{% set version = "17.11.4" %}
+{% set version = "17.12.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/dotnet/msbuild/archive/v{{ version }}.tar.gz
-  sha256: ba5bf333d51283765e8157c7dd5ab116b24a5204ce5ae642ef7a7e2b37c50b8e
+  sha256: 1aa44f0aca88e45f6a77d90f0c4c1edc1def1236f434fd8c35d8bfc28200800f
 
 build:
   noarch: generic
