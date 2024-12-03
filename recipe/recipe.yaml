@@ -1,17 +1,17 @@
-{% set name = "msbuild" %}
-{% set version = "17.11.4" %}
+context:
+  version: 17.11.4
 
 package:
-  name: {{ name|lower }}
-  version: {{ version }}
+  name: msbuild
+  version: ${{ version }}
 
 source:
-  url: https://github.com/dotnet/msbuild/archive/v{{ version }}.tar.gz
+  url: https://github.com/dotnet/msbuild/archive/v${{ version }}.tar.gz
   sha256: ba5bf333d51283765e8157c7dd5ab116b24a5204ce5ae642ef7a7e2b37c50b8e
 
 build:
-  noarch: generic
   number: 0
+  noarch: generic
 
 requirements:
   host:
@@ -21,18 +21,18 @@ requirements:
   run:
     - dotnet
 
-test:
-  commands:
-    - MSBuild --help
+tests:
+  - script:
+      - MSBuild --help
 
 about:
-  home: https://github.com/dotnet/msbuild
   license: MIT
   license_file:
     - LICENSE
     - license-files/
   summary: The Microsoft Build Engine (MSBuild) is the build platform for .NET and Visual Studio.
-  dev_url: https://github.com/dotnet/msbuild
+  homepage: https://github.com/dotnet/msbuild
+  repository: https://github.com/dotnet/msbuild
 
 extra:
   recipe-maintainers:
