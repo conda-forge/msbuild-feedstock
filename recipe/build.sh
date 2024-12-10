@@ -35,3 +35,5 @@ EOF
 
 # Download dependency licenses wtih dotnet-project-licenses
 dotnet-project-licenses --input src/MSBuild/MSBuild.csproj -t -d license-files
+
+rm ${PREFIX}/bin/dotnet
