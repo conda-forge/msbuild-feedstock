@@ -1,5 +1,5 @@
 context:
-  version: "17.14.21"
+  version: "17.14.37"
 
 package:
   name: msbuild
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/dotnet/msbuild/archive/v${{ version }}.tar.gz
-  sha256: af1012c0e7c98cb5c8da34f5d9b069aa145c21488188aa873e1be79bf4e94c72
+  sha256: 5ba5aeb2fd9ec277ba89d3300275f312f168172a42b16efbbe6d4feaebd7dd22
 
 build:
   number: 0
@@ -15,11 +15,11 @@ build:
 
 requirements:
   host:
-    - dotnet
+    - dotnet =9
     - jq
-    - nuget-license
+    - nuget-license <4
   run:
-    - dotnet
+    - dotnet =9
 
 tests:
   - script:
