@@ -15,11 +15,11 @@ build:
 
 requirements:
   host:
-    - dotnet
+    - dotnet =9
     - jq
-    - nuget-license
+    - nuget-license <4
   run:
-    - dotnet
+    - dotnet =9
 
 tests:
   - script:
