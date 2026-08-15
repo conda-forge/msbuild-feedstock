@@ -1,5 +1,5 @@
 context:
-  version: "18.8.2"
+  version: "18.9.6"
 
 package:
   name: msbuild
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/dotnet/msbuild/archive/v${{ version }}.tar.gz
-  sha256: 8481cce08327c6d870363803aef20a5d9de3b4b26069fda432f58ead65fb7a2c
+  sha256: f1b0874df9a42e8d2e47f83f5a31f878b19942767eed8c58e3fe34705e6af74f
 
 build:
   number: 0
