@@ -8,7 +8,7 @@ ln -sf ${DOTNET_ROOT}/dotnet ${PREFIX}/bin
 
 # Build package with dotnet publish
 mv global.json global_old.json
-jq 'del(.tools)' global_old.json > global.json
+jq 'del(.tools)' global_old.json | jq 'del(.sdk)' > global.json
 framework_version="$(dotnet --version | sed -e 's/\..*//g').0"
 dotnet publish --no-self-contained src/MSBuild/MSBuild.csproj --output ${PREFIX}/libexec/${PKG_NAME} --framework "net${framework_version}" -p:ErrorOnDuplicatePublishOutputFiles=false
 
